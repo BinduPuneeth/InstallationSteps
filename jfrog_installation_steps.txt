@@ -1,0 +1,38 @@
+Jfrog Installation Steps
+
+1.--First need launch instance
+		(ec2-instance)
+		(t2.medium)-launch instance
+		(security group-All traffic)-save
+
+
+2.--connect instance through mabaxtream
+		(remote address-public ip of instance)
+		(username-ec2-user)
+		(advance setting-
+			useprivate key
+			-click on check box
+			-select .pem key which you have used to create instance
+			-ok)
+3.--sudo su - (convert ec2-user to complete root user)
+4.--wget https://releases.jfrog.io/artifactory/bintray-artifactory/org/artifactory/oss/jfrog-artifactory-oss/[RELEASE]/jfrog-artifactory-oss-[RELEASE]-linux.tar.gz?
+  _gl=1*1li7shh*_ga*NDE5NTQ4Mzk4LjE2NTc3OTg1NTM.*_ga_SQ1NR9VTFJ*MTY1Nzg3NzAzNi40LjEuMTY1Nzg3NzA4NS4xMQ..
+ (to download jfrog)
+5.--tar -zvxf jfrog-artifactory-oss-\[RELEASE\]-linux.tar.gz\?_gl\=1\*1li7shh\*_ga\*NDE5NTQ4Mzk4LjE2NTc3OTg1NTM.\*_ga_SQ1NR9VTFJ\*MTY1Nzg3NzAzNi40LjEuMTY1Nzg3NzA4NS4xMQ..
+ (to untar and unzip)
+
+6.--./artifactory-oss-7.49.3/app/bin/artifactoryctl
+ (to run or start jfrog service) or cd artifactory-oss-7.49.3
+				    cd app
+				    cd bin
+				    ./artifactoryctl (to run this file)
+7.--Now to access Jrog application
+	publicIP:8082 (default jfrog port no.)
+	username - admin
+	password - password
+	
+8.--need to change password
+	get started
+	give password - Admin@123
+	next,then skip all then finish
+
